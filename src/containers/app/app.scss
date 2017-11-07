@@ -1,0 +1,21 @@
+@import "../../utils";
+@import "../../constants";
+
+.app {
+  @include flex-container(column, center, center);
+  width: 1065px;
+
+  .app__title {
+    @include flex-container(column, center, center);
+    width: 100%;
+    height: 52px;
+    background-color: $bgDelimitersColor;
+  }
+
+  .footer {
+    .pay {
+
+    }
+  }
+
+}

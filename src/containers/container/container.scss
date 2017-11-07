@@ -1,0 +1,26 @@
+@import "../../utils";
+@import "../../constants";
+
+.container {
+  @include flex-container(column, center, flex-start);
+
+  width: 100%;
+  background-color: white;
+
+  border-bottom: 3px solid $bgDelimitersColor;
+
+  padding-bottom: 40px;
+
+  #{&}__title {
+    @include flex-container(row, flex-start, center);
+
+    margin-top: 41px;
+    margin-bottom: 31px;
+
+    font-family: 'PT Sans Caption', serif;
+    font-weight: bold;
+
+    padding-left: $stepFromLeft;
+  }
+
+}

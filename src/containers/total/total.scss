@@ -1,0 +1,46 @@
+@import "../../utils";
+@import "../../constants";
+
+.total {
+
+  .total__price {
+    @include flex-container(row, flex-start, center);
+
+    margin-left: $stepFromLeft;
+
+    &_additional {
+      color: #bebebe;
+    }
+
+    .total__price-main {
+      font-size: 48px;
+      line-height: normal;
+      font-family: 'PT Sans Caption';
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .total__price-sum {
+      color: #000000;
+      font-size: 48px;
+      line-height: normal;
+      font-family: 'PT Sans Caption';
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .total__price-unit {
+      font-family: 'PT Sans Caption';
+      font-weight: bold;
+      color: #000000;
+      margin-left: 10px;
+    }
+  }
+
+  .total__estimate {
+    margin-left: $stepFromLeft;
+    color: $commentColor;
+    margin-bottom: 30px;
+
+  }
+}

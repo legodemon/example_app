@@ -1,0 +1,75 @@
+@import "../../../utils";
+@import "../../../constants";
+
+.time-case {
+  @include flex-container(column, space-between, center);
+
+  &:hover {
+    background-color: $hoveredColor;
+  }
+
+  width: 186px;
+  height: 111px;
+
+  border: 1px dashed black;
+
+  cursor: pointer;
+
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &_twoyear {
+
+  }
+
+  &_oneyear {
+
+  }
+
+  &_halfyear {
+
+  }
+
+  .time-case-header {
+    @include flex-container(row, space-between, center);
+    width: 100%;
+
+    .time-case-header-caption {
+      margin-top: 14px;
+      margin-left: 13px;
+      .time-case-header-caption__title {
+        margin-bottom: 4px;
+      }
+      .time-case-header-caption__price {
+        color: #976c65;
+
+      }
+    }
+    .time-case-header-image {
+      height: 40px;
+      .time-case-header-image__card {
+        position: relative;
+        top: -20px;
+        right: -10px;
+      }
+    }
+  }
+  .time-case-price {
+    @include flex-container(row, flex-start, flex-end);
+    width: 100%;
+    margin-bottom: 3px;
+
+    .time-case-price__value {
+      margin-left: 13px;
+      margin-right: 8px;
+      font-size: 32px;
+    }
+    .time-case-price__unit {
+      position: relative;
+      top: -5px;
+    }
+  }
+
+}

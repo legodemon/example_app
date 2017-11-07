@@ -1,0 +1,55 @@
+@import "../../../utils";
+@import "../../../constants";
+
+.payments-systems__element {
+
+  width: 186px;
+  height: 90px;
+
+  border: 1px dashed black;
+
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  $payments: (
+          cards: (156px, 38px),
+          paypal: (172px, 48px),
+          qiwi: (152px, 72px),
+          webmoney: (196px, 50px),
+          yamoney: (128px, 56px)
+  );
+
+  @each $payment, $keyNumber in $payments {
+    &_#{$payment} {
+      @include flex-container(row, center, center);
+      width: 220px;
+      height: 90px;
+
+      .image {
+        @include get-image('payment_#{$payment}-bw.png');
+        @include set-icon-size(nth($keyNumber, 1), nth($keyNumber, 2));
+      }
+
+      &:hover, &_selected {
+        .image {
+          @include get-image('payment_#{$payment}.png');
+        }
+        background-color: $hoveredColor;
+      }
+    }
+  }
+
+
+  &_sms {
+    width: 220px;
+    height: 90px;
+  }
+
+  &_giftnumber {
+    width: 220px;
+    height: 90px;
+  }
+}

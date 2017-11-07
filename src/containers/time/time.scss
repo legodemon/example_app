@@ -1,0 +1,18 @@
+@import "../../utils";
+@import "../../constants";
+
+.time {
+
+  .time-cases {
+    @include flex-container(row, flex-start, center);
+    margin-left: $stepFromLeft;
+  }
+
+  .time__comment {
+    color: #666666;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: $stepFromLeft;
+    width: 520px;
+  }
+}

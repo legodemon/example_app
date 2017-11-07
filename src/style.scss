@@ -1,0 +1,62 @@
+@import "resources/PTSansWeb/stylesheet.css";
+@import "utils";
+
+$bgColor: #fefcf0;
+$bgDelimitersColor: #edf1f4;
+$stepFromLeft: 58px;
+$commentColor: #666666;
+$hoveredColor: #f9de91;
+
+.checkbox-group {
+  @include flex-container(row, flex-start, flex-start);
+  width: 83%;
+  padding-left: $stepFromLeft;
+
+  .checkbox-group__check {
+    //margin: 0;
+    padding: 0;
+  }
+
+  .checkbox-group-wrapper {
+    @include flex-container(column, center, flex-start);
+    padding-left: 10px;
+    .checkbox-group__label {
+
+    }
+
+    .checkbox-group__comment {
+      //margin-left: 22px;
+      //margin-left: 10px;
+      color: $commentColor;
+    }
+  }
+}
+
+html, body {
+  font-family: "PT Sans";
+  background-color: $bgColor;
+  box-sizing: border-box;
+
+  .subscript {
+
+    @include flex-container(column, center, center);
+
+    .title {
+
+      @include flex-container(column, center, center);
+
+      .title__caption {
+        font-size: 48px;
+      }
+
+      .title__comment {
+        color: $commentColor;
+      }
+
+      margin-bottom: 15px;
+    }
+
+
+  }
+
+}

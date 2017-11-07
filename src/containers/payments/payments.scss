@@ -1,0 +1,28 @@
+@import "../../utils";
+@import "../../constants";
+
+.payments {
+
+  .payments-systems {
+
+    @include flex-container(row, flex-start, center);
+
+    flex-wrap: wrap;
+
+    height: 224px;
+    margin-left: $stepFromLeft;
+
+  }
+
+  .payments-gift {
+    //margin-left: $stepFromLeft;
+    margin-top: 26px;
+
+    .payments-gift__check {
+
+    }
+    .payments-gift__label {
+      cursor: pointer;
+    }
+  }
+}
