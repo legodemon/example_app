@@ -12,6 +12,28 @@
     background-color: $bgDelimitersColor;
   }
 
+  .container_anim-enter {
+    opacity: 0.01;
+    height: 0;
+  }
+
+  .container_anim-enter.container_anim-enter-active {
+    opacity: 1;
+    height: 340px;
+    transition: opacity 500ms ease, height 500ms ease;
+  }
+
+  .container_anim-leave {
+    opacity: 1;
+    height: 340px;
+  }
+
+  .container_anim-leave.container_anim-leave-active {
+    opacity: 0.01;
+    height: 0;
+    transition: opacity 300ms ease, height 300ms ease;
+  }
+
   .footer {
     .pay {
 

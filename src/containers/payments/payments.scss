@@ -25,4 +25,23 @@
       cursor: pointer;
     }
   }
+
+  .payments_gift_anim-enter {
+    opacity: 0.01;
+  }
+
+  .payments_gift_anim-enter.payments_gift_anim-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease;
+  }
+
+  .payments_gift_anim-leave {
+    opacity: 1;
+  }
+
+
+  .payments_gift_anim-leave.payments_gift_anim-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease;
+  }
 }

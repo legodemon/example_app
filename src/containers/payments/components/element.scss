@@ -42,14 +42,36 @@
     }
   }
 
-
   &_sms {
     width: 220px;
     height: 90px;
+    @include flex-container(column, center, center);
+
+    &-title {
+      font-size: 30px;
+    }
+
+    &-comment {
+      color: $commentColor;
+    }
+
+    &:hover, &_selected {
+      background-color: $hoveredColor;
+    }
   }
 
   &_giftnumber {
     width: 220px;
     height: 90px;
+
+    @include flex-container(column, center, center);
+    text-align: center;
+
+    &:hover, &_selected {
+      background-color: $hoveredColor;
+    }
+    &-title {
+      font-size: 30px;
+    }
   }
 }
