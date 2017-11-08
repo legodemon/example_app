@@ -5,9 +5,9 @@ import './timecase.scss';
 export default class TimeCase extends Component {
 
     render = () => {
-        const {period, priceTotal, priceMonth, classNameMod} = this.props;
+        const {period, priceTotal, priceMonth, classNameMod, handler} = this.props;
 
-        return <div className={`time-case time-case_${classNameMod}`}>
+        return <div onClick={handler} className={`time-case time-case_${classNameMod}`}>
             <div className='time-case-header'>
                 <div className='time-case-header-caption'>
                     <div className='time-case-header-caption__title'>{period}</div>

@@ -29,16 +29,19 @@ export default class Time extends Component {
 
     render = () => {
 
+        const {time: {available, id}, setTime} = this.props;
+
         return [
 
             <div key={uid('time')} className='time-cases'>
                 {
-                    this.data.map(({period, priceTotal, priceMonth, classNameMod}) =>
+                    available.map(({ids, period, priceTotal, priceMonth, classNameMod}) =>
                         <TimeCase key={uid('time-case')}
                                   period={period}
                                   priceTotal={priceTotal}
                                   priceMonth={priceMonth}
-                                  classNameMod={classNameMod}/>
+                                  classNameMod={classNameMod}
+                                  handler={id !== ids ? () => setTime(ids) : () => ({})}/>
                     )
                 }
             </div>,
